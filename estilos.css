@@ -1,0 +1,144 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.contenedor{    /*contenedor que contiene toda la clase--- padre de todos los elementos*/
+
+    background-color: #ccc;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    /*flex*/
+    display: flex;
+    flex-direction: row;  /*una forma*/
+    flex-wrap: wrap;      /*una forma*/
+
+    /*flex-flow: row wrap;   /*segunda forma*/
+
+
+}
+body{
+
+    background-color: #e9e9;
+}
+
+
+    /*el header es hijo del contenedor pero a la vez pasa a ser padre del logotipo y el menu de navegacion */
+header{
+    background-color: #2c3e50;
+    width: 100%;
+    padding: 20px;
+    /*Flex*/
+    display: flex;
+    justify-content: space-between;  /* separo el menu al laderecha*/
+    align-items: center;               /* centro el menu */
+     flex-flow: row wrap;   /*segunda forma*/
+
+}
+
+header .logo{
+
+    color: #fff;
+    font-size: 30px;
+}
+
+header .logo img{
+
+    width: 50px ;
+    vertical-align: top;
+}
+
+header .logo a{
+    color:#fff ;
+    text-decoration: none;
+    line-height: 50px;
+}
+
+
+header nav{   /* va hacer padre de los elementos hijos*/
+
+    width: 50%;
+   /*flex*/
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+}
+
+
+  header nav a {
+
+background: #c0392b;
+color: #fff;
+text-align: center;
+text-decoration: none;   /*    <----puedo colorlo en e body*/
+padding: 10px;
+/*flex*/
+flex-grow: 1;
+  }
+  
+header nav a:hover{
+
+    background: #e74c3c;
+
+}
+
+.main{
+
+
+    background-color:  #fff;
+    padding: 20px;
+    flex: 1 1 70%;  /*primer valor */
+}
+.main article{
+   margin-bottom: 0;
+   padding-bottom: 0;
+    border-bottom: 1px solid #000;
+    }
+
+    .main article:nth-last-child(1)
+    {
+
+
+        margin-bottom: 0;
+        padding-bottom: 0;
+         border-bottom: none;
+
+    }
+      
+
+
+    
+
+
+
+
+
+aside{
+    background-color: #e67e22;
+
+    /*FLEX*/
+    FLEX: 1 1 30%;
+    display: flex;
+
+
+
+
+}
+ aside .widge{
+     background-color: #d35400;
+     height: 150px;
+     margin: 10px;
+
+
+ }
+
+ footer{
+     background-color: #2c3e50;
+
+
+
+ }
